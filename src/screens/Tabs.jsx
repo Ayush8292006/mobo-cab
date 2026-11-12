@@ -85,7 +85,7 @@ export function RideDetail({ params: i }) {
     up({ mode: r.veh === 'parcel' ? 'parcel' : 'ride', veh: r.veh, drop: withPoint(p, pi < 0 ? 'home' : undefined) });
     replace('route');
   };
-  const mini = `${BASE}<path d="M200 260V${d.y}H${d.x}" fill="none" stroke="#141414" stroke-width="4.5" stroke-linejoin="round"/>${pickupPin()}<g transform="translate(${d.x} ${d.y})"><circle r="6" fill="#E2463A" stroke="#fff" stroke-width="2.5"/></g>`;
+  const mini = `${BASE}<path d="M200 260V${d.y}H${d.x}" fill="none" stroke="#16130F" stroke-width="4.5" stroke-linejoin="round"/>${pickupPin()}<g transform="translate(${d.x} ${d.y})"><circle r="6" fill="#E2463A" stroke="#fff" stroke-width="2.5"/></g>`;
   return (
     <>
       <Header title="Ride details" sub={`${r.when} · ID ${r.id}`} />
@@ -99,7 +99,7 @@ export function RideDetail({ params: i }) {
           <div className="row" style={{ marginTop: 14 }}>
             <Art type={r.veh} width={52} height={36} />
             <div style={{ flex: 1 }}><b>{VEH[r.veh].n}</b><p className="small mut">{r.status === 'Completed' ? 'Captain · ' + r.cap : 'Cancelled by you'}</p></div>
-            {r.rate > 0 && <span className="row" style={{ gap: 2 }}>{[1, 2, 3, 4, 5].map((k) => <Star key={k} s={14} fill={k <= r.rate ? '#FFC41F' : 'none'} />)}</span>}
+            {r.rate > 0 && <span className="row" style={{ gap: 2 }}>{[1, 2, 3, 4, 5].map((k) => <Star key={k} s={14} fill={k <= r.rate ? '#D4A537' : 'none'} />)}</span>}
           </div>
         </div>
         <div className="div" />

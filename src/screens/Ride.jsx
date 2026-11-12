@@ -291,7 +291,7 @@ export function Done() {
           <p style={{ fontWeight: 800, fontSize: 16, marginTop: 12 }}>How was your ride with {first}?</p>
           <div className="stars">
             {[1, 2, 3, 4, 5].map((i) => (
-              <button key={i} onClick={() => { setRate(i); setTags([]); }}><Star s={36} fill={i <= rate ? '#FFC41F' : 'none'} /></button>
+              <button key={i} onClick={() => { setRate(i); setTags([]); }}><Star s={36} fill={i <= rate ? '#D4A537' : 'none'} /></button>
             ))}
           </div>
           {rate > 0 && (
